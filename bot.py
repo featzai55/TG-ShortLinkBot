@@ -26,7 +26,7 @@ bot = Client('Shortlink bot',
 async def start(bot, update):
     await update.reply(
         f"**Hey {update.chat.first_name}!**\n\n"
-        "Just send me the link dude")
+        "Just send me the link dude\n Owner @featzai")
 
 
 @bot.on_message(Filters.regex(r'https?://[^\s]+') & Filters.private)
@@ -36,7 +36,8 @@ async def link_handler(bot, update):
       try:
         s = pyshorteners.Shortener(api_key=API_KEY) 
         shortened_url = s.cuttly.short(link)
-        button = [[InlineKeyboardButton("Link 🔗", url=shortened_url)]]
+        button = [[InlineKeyboardButton("Link 🔗", url=shortened_url)]]:
+[[InlineKeyboardButton("Owner", url=https://t.me/featzai)]]
         markup = InlineKeyboardMarkup(button)
         await update.reply_text(text=f'Here is your shortlink mate  \n`{shortened_url}`', reply_markup=markup, quote=True)
         
