@@ -25,7 +25,7 @@ bot = Client('Shortlink bot',
 @bot.on_message(Filters.command('start') & Filters.private)
 async def start(bot, update):
     await update.reply(
-        f"**Hi {update.chat.first_name}!**\n\n"
+        f"**Hey {update.chat.first_name}!**\n\n"
         "Just send me the link dude")
 
 
