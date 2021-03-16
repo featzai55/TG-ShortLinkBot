@@ -26,7 +26,7 @@ bot = Client('Shortlink bot',
 async def start(bot, update):
     await update.reply(
         f"**Hi {update.chat.first_name}!**\n\n"
-        "I'm shortlink bot. Just send me link and get adsless short link")
+        "Just send me the link dude")
 
 
 @bot.on_message(Filters.regex(r'https?://[^\s]+') & Filters.private)
@@ -38,7 +38,7 @@ async def link_handler(bot, update):
         shortened_url = s.cuttly.short(link)
         button = [[InlineKeyboardButton("Link 🔗", url=shortened_url)]]
         markup = InlineKeyboardMarkup(button)
-        await update.reply_text(text=f'Here is your shortlink \n`{shortened_url}`', reply_markup=markup, quote=True)
+        await update.reply_text(text=f'Here is your shortlink mate  \n`{shortened_url}`', reply_markup=markup, quote=True)
         
       except Exception as e:
         await update.reply(f'Error: {e}', quote=True)
@@ -48,7 +48,7 @@ async def link_handler(bot, update):
         shortened_url = s.dagd.short(link)
         button = [[InlineKeyboardButton("Link 🔗", url=shortened_url)]]
         markup = InlineKeyboardMarkup(button)
-        await update.reply_text(text=f'Here is your shortlink \n`{shortened_url}`', reply_markup=markup, quote=True)
+        await update.reply_text(text=f'Here is your shortlink mate \n`{shortened_url}`', reply_markup=markup, quote=True)
         
       except Exception as e:
         await update.reply(f'Error: {e}', quote=True)
