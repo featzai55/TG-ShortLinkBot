@@ -10,15 +10,15 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token",
-            "value": ""
+            "value": "1601997600:AAEVfPkaXGyKmOQQX8I5TjFKaWoUMGBCyTw"
         },
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
-            "value": ""
+            "value": "2995136"
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
-            "value": ""
+            "value": "3c3766c8df153afb9e5ebfe7314af305"
         },
         "API_KEY": {
             "description": "(Not Compulsory) Cutt.ly API See Readme for further details",
